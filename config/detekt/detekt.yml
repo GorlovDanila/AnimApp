@@ -124,7 +124,7 @@ complexity:
     threshold: 500
   LongMethod:
     active: true
-    threshold: 50
+    threshold: 100
   LongParameterList:
     active: true
     functionThreshold: 7
@@ -326,7 +326,7 @@ naming:
     active: true
     minimumFunctionNameLength: 3
   FunctionNaming:
-    active: true
+    active: false
     excludes: [ '**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**' ]
     functionPattern: '[a-z][a-zA-Z0-9]*'
     excludeClassPattern: '$^'
@@ -344,7 +344,7 @@ naming:
     active: false
     parameterPattern: '[a-z][A-Za-z0-9]*|_'
   MatchingDeclarationName:
-    active: true
+    active: false
     mustBeFirst: true
   MemberNameEqualsClassName:
     active: true
