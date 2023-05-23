@@ -18,7 +18,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -31,6 +30,7 @@ import com.example.animapp.presentation.presenters.DetailsAction
 import com.example.animapp.presentation.presenters.DetailsEvent
 import com.example.animapp.presentation.presenters.DetailsViewModel
 import com.example.animapp.presentation.presenters.DetailsViewState
+import com.example.animapp.presentation.ui.theme.MyTheme
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -96,7 +96,7 @@ fun DetailItem(
 ) {
     LazyColumn(modifier = Modifier
         .fillMaxSize()
-        .background(Color.LightGray)) {
+        .background(MyTheme.colors.primaryBackground)) {
         item {
             Column(
                 modifier = Modifier.padding(12.dp)
@@ -128,28 +128,36 @@ fun DetailItem(
                         textAlign = TextAlign.Start,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(4.dp),
+                        color = MyTheme.colors.primaryText,
+                        style = MyTheme.typography.globalTextStyle
                     )
                     Text(
                         text = "Type: ${animInfo?.type}",
                         textAlign = TextAlign.Start,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(4.dp),
+                        color = MyTheme.colors.primaryText,
+                        style = MyTheme.typography.globalTextStyle
                     )
                     Text(
                         text = "Year: ${animInfo?.year}",
                         textAlign = TextAlign.Start,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(4.dp),
+                        color = MyTheme.colors.primaryText,
+                        style = MyTheme.typography.globalTextStyle
                     )
                     Text(
                         text = "Status: ${animInfo?.status}",
                         textAlign = TextAlign.Start,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(4.dp),
+                        color = MyTheme.colors.primaryText,
+                        style = MyTheme.typography.globalTextStyle
                     )
                     Text(
                         text = "Genres: ${
@@ -158,21 +166,27 @@ fun DetailItem(
                         textAlign = TextAlign.Start,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(4.dp),
+                        color = MyTheme.colors.primaryText,
+                        style = MyTheme.typography.globalTextStyle
                     )
                     Text(
                         text = "Episodes: ${animInfo?.episodes}",
                         textAlign = TextAlign.Start,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(4.dp),
+                        color = MyTheme.colors.primaryText,
+                        style = MyTheme.typography.globalTextStyle
                     )
                     Text(
                         text = "${animInfo?.synopsis}",
                         textAlign = TextAlign.Start,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(4.dp)
+                            .padding(4.dp),
+                        color = MyTheme.colors.primaryText,
+                        style = MyTheme.typography.globalTextStyle
                     )
                 }
             }

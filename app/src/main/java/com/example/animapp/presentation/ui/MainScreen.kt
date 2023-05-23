@@ -1,6 +1,5 @@
 package com.example.animapp.presentation.ui
 
-import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -22,7 +21,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -39,6 +37,7 @@ import com.example.animapp.presentation.presenters.MainAction
 import com.example.animapp.presentation.presenters.MainEvent
 import com.example.animapp.presentation.presenters.MainViewModel
 import com.example.animapp.presentation.presenters.MainViewState
+import com.example.animapp.presentation.ui.theme.MyTheme
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -109,11 +108,11 @@ fun MyListItem(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(15.dp)
+            .padding(12.dp)
             .clickable {
                 onClick.invoke(animInfo)
             },
-        elevation = CardDefaults.cardElevation(12.dp)
+        elevation = CardDefaults.cardElevation(12.dp),
     ) {
         Row(horizontalArrangement = Arrangement.SpaceEvenly) {
             SubcomposeAsyncImage(
@@ -136,23 +135,27 @@ fun MyListItem(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = 10.dp, vertical = 4.dp),
+                    .padding(horizontal = 8.dp, vertical = 12.dp),
             ) {
                 Text(
                     text = "${animInfo.title}",
                     textAlign = TextAlign.Center,
+                    style = MyTheme.typography.globalTextStyle
                 )
                 Text(
                     text = "Type: ${animInfo.type}",
                     textAlign = TextAlign.Center,
+                    style = MyTheme.typography.globalTextStyle
                 )
                 Text(
                     text = "Year: ${animInfo.year}",
                     textAlign = TextAlign.Center,
+                    style = MyTheme.typography.globalTextStyle
                 )
                 Text(
                     text = animInfo.genres.toString().replace("[", "").replace("]", ""),
                     textAlign = TextAlign.Center,
+                    style = MyTheme.typography.globalTextStyle
                 )
                 Row {
                     Text(
@@ -160,7 +163,8 @@ fun MyListItem(
                         textAlign = TextAlign.Start,
                         maxLines = 3,
                         overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.padding(vertical = 4.dp)
+                        modifier = Modifier.padding(vertical = 4.dp),
+                        style = MyTheme.typography.globalTextStyle
                     )
                 }
             }
@@ -168,7 +172,6 @@ fun MyListItem(
     }
 }
 
-//Сделать лоадинг icon
 @Composable
 fun AnimList(
     viewState: MainViewState,
@@ -178,7 +181,7 @@ fun AnimList(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.LightGray)
+            .background(MyTheme.colors.primaryBackground)
     ) {
         viewState.anims?.listAnim?.let { list ->
             items(

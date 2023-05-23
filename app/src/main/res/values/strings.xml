@@ -2,5 +2,7 @@
     <string name="app_name">AnimApp</string>
     <string name="screen_main">Main</string>
     <string name="screen_detail">Details</string>
+    <string name="screen_settings">Settings</string>
+    <string name="screen_template">Template</string>
     <string name="details_prefix">details/</string>
 </resources>
