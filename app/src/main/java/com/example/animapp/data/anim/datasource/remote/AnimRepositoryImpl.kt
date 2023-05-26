@@ -2,8 +2,8 @@ package com.example.animapp.data.anim.datasource.remote
 
 import com.example.animapp.data.anim.mapper.toAnimInfo
 import com.example.animapp.data.anim.mapper.toAnimListInfo
-import com.example.animapp.domain.anim.AnimInfo
-import com.example.animapp.domain.anim.AnimListInfo
+import com.example.animapp.domain.anim.model.AnimInfo
+import com.example.animapp.domain.anim.model.AnimListInfo
 import com.example.animapp.domain.anim.AnimRepository
 
 class AnimRepositoryImpl(

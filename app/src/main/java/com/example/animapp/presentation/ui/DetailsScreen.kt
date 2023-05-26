@@ -25,7 +25,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImagePainter
 import coil.compose.SubcomposeAsyncImage
 import coil.compose.SubcomposeAsyncImageContent
-import com.example.animapp.domain.anim.AnimInfo
+import com.example.animapp.domain.anim.model.AnimInfo
 import com.example.animapp.presentation.presenters.DetailsAction
 import com.example.animapp.presentation.presenters.DetailsEvent
 import com.example.animapp.presentation.presenters.DetailsViewModel

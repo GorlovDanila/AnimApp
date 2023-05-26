@@ -3,9 +3,9 @@ package com.example.animapp.presentation.presenters
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.animapp.domain.anim.AnimInfo
-import com.example.animapp.domain.anim.AnimListInfo
-import com.example.animapp.domain.anim.GetAnimListUseCase
+import com.example.animapp.domain.anim.model.AnimInfo
+import com.example.animapp.domain.anim.model.AnimListInfo
+import com.example.animapp.domain.anim.remote.GetAnimListUseCase
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.StateFlow

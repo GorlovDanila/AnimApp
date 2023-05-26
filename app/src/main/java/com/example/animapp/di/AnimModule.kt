@@ -3,8 +3,8 @@ package com.example.animapp.di
 import com.example.animapp.data.anim.datasource.remote.AnimApi
 import com.example.animapp.data.anim.datasource.remote.AnimRepositoryImpl
 import com.example.animapp.domain.anim.AnimRepository
-import com.example.animapp.domain.anim.GetAnimByIdUseCase
-import com.example.animapp.domain.anim.GetAnimListUseCase
+import com.example.animapp.domain.anim.remote.GetAnimByIdUseCase
+import com.example.animapp.domain.anim.remote.GetAnimListUseCase
 import org.koin.dsl.module
 
 val animModule = module {

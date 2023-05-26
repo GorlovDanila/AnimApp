@@ -1,4 +1,4 @@
-package com.example.animapp.domain.anim
+package com.example.animapp.domain.anim.model
 
 import com.google.gson.annotations.SerializedName
 

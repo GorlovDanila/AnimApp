@@ -1,4 +1,4 @@
-package com.example.animapp.utils
+package com.example.animapp.utils.navigation
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.padding

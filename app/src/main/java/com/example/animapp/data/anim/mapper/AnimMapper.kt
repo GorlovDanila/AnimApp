@@ -2,7 +2,7 @@ package com.example.animapp.data.anim.mapper
 
 import com.example.animapp.data.anim.datasource.remote.response.AnimResponse
 import com.example.animapp.data.anim.datasource.remote.response.Data
-import com.example.animapp.domain.anim.AnimInfo
+import com.example.animapp.domain.anim.model.AnimInfo
 
 fun AnimResponse.toAnimInfo(): AnimInfo = dataMapper(data)
 
